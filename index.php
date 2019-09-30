@@ -55,6 +55,21 @@ $nomeSistema = "Site Top";
      echo  $usuario[3];
      echo  $usuarioDois["sobrenome"];
 
+     echo "<br>";
+
+     $numero = 1;
+     switch($numero) {
+         case 15:
+         echo "o nomero é igual a 1";
+         break;
+         case 1:
+         echo "o numero é igual é maior que 1";
+         break;
+         default:
+         echo "nada deu certo bixo, se fode ai";
+         break;
+     }
+
     ?>
 </body>
 </html>
