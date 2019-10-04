@@ -1,12 +1,7 @@
+
 <?php
 $nomeSitema = "Cursos Aí!";
 $usuario = ["nome"=>"Felipe"];
-
-$produtos = [
-    ["nome"=>"Curso FullStack","preco"=>1200.00,"duracao"=>"5 meses", "img"=>"img/imagess.png"],
-    ["nome"=>"Curso Marketing","preco"=>1000.00,"duracao"=>"4 meses", "img"=>"img/imagess.png"],
-
-];
 
 $caixas =["Cursos","Palestras","Artigos"];
 
@@ -75,23 +70,28 @@ $caixas =["Cursos","Palestras","Artigos"];
     </header>
     <main>
         <section class="container">
-            
-                <div  class="d-flex justify-content-center main" style="">
-                <?php if(isset($produtos) && $produtos != []) {?>
-                    <?php foreach($produtos as $produto){ ?>
-                        <div class="card text-center mr-4">
-                            <h2><?php echo $produto['nome']; ?></h2>
-                            <img id="foto" src="<?php echo $produto['img']; ?>" class="card-img-top" alt="curso de t.i.">
-                            <div class="card-body">
-                                <h5 class="card-text"><?php echo $produto['preco']; ?></h5><br>
-                                <a link href="car]inho.php?nomeProduto=<?php echo $produto['nome'];?>">Comprar</a>
-                            </div>
-                        </div>
-                    <?php } ?>
-                <?php } else { ?>
-                    <h1>Não tem produtos cadastrados nessa sessão :( </h1>
-                <?php } ?>
+            <div class="row">
+                <div class="col-12"> 
+                        <h1>Carinho de Compras</h1>
+                </div>
+            </div>
+            <div class ="col-12">
+                <div class="row-card">
+                    <div class="col-12">
+                    <h3>voce esta comprando o curso <?php echo $_GET['nomeProduto'];?><h3>
                     </div>
+                        <div class ="col-lg-6 col-md-6">
+                            <form class ="d-flex flex-column p-3"method="post" action ="sucesso1.php">
+                                <input type="text" name="nomeCompleto" placeholder="Digite seu nome"></input>
+                                <input type="text" name="CPF" placeholder="Digite seu CPF"></input>
+                                <input type="number" name="number" placeholder="Digite o numero do seu cartão"></input>
+                                <input type="date" name="validadeCartao" placeholder="Digite a data de validade"></input>
+                                <input type="passaword" name="codigoCartao" placeholder="Digite o CV"></input>
+                                <button class="btn btn-success" type="submit">Finalizar compra</button>
+                            </form>
+                        </div>
+                </div>
+            </div>
         </section>
     </main>
 </body>
