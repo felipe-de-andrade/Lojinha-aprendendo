@@ -6,28 +6,28 @@
             <?php echo $nomeSitema;?>
             </h1>
             <nav>
-            <ul class="nav">
-                <?php if (isset($usuario) && $usuario != "") {?>
-                
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Cursos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Olá <?php echo $usuario{'nome'}; ?></a>
-                    </li>
-                <?php }else {?>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Cadastrar</a>
-                    </li>
-                <?php } ?>
+                <ul class="nav">
+                    <?php if (isset($usuario) && $usuario != "") {?>
+                    
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Cursos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Olá <?php echo $usuario{'nome'}; ?></a>
+                        </li>
+                    <?php }else {?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Cadastrar</a>
+                        </li>
+                    <?php } ?>
                 </ul>
             </nav>
         </div>
-        <div class="navbar bg-dark text-white justify-content-center">
-            <ul class="nav">
+         <div class="navbar bg-dark text-white">
+            <ul class="nav d-flex justify-content-around">
                     <?php foreach($caixas as $caixas) { ?>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><?php echo $caixas; ?></a>
@@ -50,4 +50,4 @@
             <nav>
             </nav>
         </div>
-    </header>
+</header>

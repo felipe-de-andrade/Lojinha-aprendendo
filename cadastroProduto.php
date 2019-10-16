@@ -9,7 +9,7 @@ function cadastrarProduto($nomeProduto, $descProduto, $imgProduto, $precoProduto
 
         $produtos =json_decode($arquivos, true);
 
-        $produtos[] = ["nome"=>$nomeProduto, "preco"=>$precoProduto, "desc"=>$descProduto, "imagem"=>$produtos];
+        $produtos[] = ["nome"=>$nomeProduto, "preco"=>$precoProduto, "desc"=>$descProduto, "imagem"=>$imgProduto];
         $json = json_encode($produtos);
         $deuCerto = file_put_contents($nomeArquivo, $json);
 
@@ -23,14 +23,14 @@ function cadastrarProduto($nomeProduto, $descProduto, $imgProduto, $precoProduto
     }else{
         $produtos = [];
         //array_push()
-        $produtos[] = ["nome"=>$nomeProduto, "preco"=>$precoProduto, "desc"=>$descProduto, "imagem"=>$produtos];
+        $produtos[] = ["nome"=>$nomeProduto, "preco"=>$precoProduto, "desc"=>$descProduto, "imagem"=>$imgProduto];
         $json = json_encode($produtos);
         $deuCerto = file_put_contents($nomeArquivo, $json);
 
         if ($deuCerto){
-        return"Deu certo mem";
+       echo "Deu certo mem";
         } else{
-        return "Não deu certo se vira ai men";
+       echo "Não deu certo se vira ai men";
         }
     }
 }
@@ -38,12 +38,12 @@ function cadastrarProduto($nomeProduto, $descProduto, $imgProduto, $precoProduto
 if($_POST){
 //salvando arquivo
 $nomeIMG = $_FILES['imgProduto']['name'];
+//$dataAtual = date
 $localTemp = $_FILES['imgProduto']['tmp_name'];
 $caminhoSalvo = 'img/'.$nomeIMG;
 
 $deuCerto = move_uploaded_file($localTemp, $caminhoSalvo);
-exit;
-    cadastrarProduto($_POST['nomeProduto'], $_POST['descProduto'], $_POST['imgProduto'],$_POST['precoProduto']);
+    cadastrarProduto($_POST['nomeProduto'], $_POST['descProduto'], $caminhoSalvo,$_POST['precoProduto']);
 }
 ?>
 

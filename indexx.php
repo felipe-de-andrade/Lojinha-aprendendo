@@ -23,7 +23,7 @@ include_once("variaveis.php");
                     <?php foreach($produtos as $produto){ ?>
                         <div class="card text-center mr-4">
                             <h2><?php echo $produto['nome']; ?></h2>
-                            <img id="foto" src="<?php echo $produto['img']; ?>" class="card-img-top" alt="curso de t.i.">
+                            <img id="foto" src="<?php echo $produto['imagem']; ?>" class="card-img-top" alt="curso de t.i.">
                             <div class="card-body">
                                 <h5 class="card-text"><?php echo $produto['preco']; ?></h5><br>
                                 <a link href="carrinho.php?nomeProduto=<?php echo $produto['nome'];?>">Comprar</a>

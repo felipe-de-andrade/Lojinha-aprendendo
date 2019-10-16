@@ -1,5 +1,5 @@
 <?php
-$nomeSitema = "Cursos Aí!";
+$nomeSitema = "Lojinha muito top";
 $usuario = ["nome"=>"Felipe"];
 
 $nomeArquivo = "produto.json";
