@@ -12,13 +12,15 @@
 
 <?php
 include_once("header.php");
-include_once("config/vilidacoes.php");
+include_once("config/validacoes.php");
 
 $nomeUsuario = $_POST['nomeCompleto'];
 $cpf = $_POST["CPF"];
+$validadeCartao = $_POST['validadeCartao'];
 
 validaNome($nomeUsuario);
 validaCPF($cpf);
+validaDataNascimento($validadeCartao);
 
 if( count($erros) == 0 ){
     echo "<h1> ola $nomeUsuario, sua compra foi realizada com sucesso </h1>"; 

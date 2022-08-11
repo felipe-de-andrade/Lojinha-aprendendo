@@ -1,7 +1,7 @@
 
 <?php
 $nomeSitema = "Cursos Aí!";
-$usuario = ["nome"=>"Felipe"];
+$usuario = ["nome"=>"Felipe de Andrade"];
 
 $caixas =["Cursos","Palestras","Artigos"];
 
@@ -37,7 +37,7 @@ $caixas =["Cursos","Palestras","Artigos"];
                             <form class ="d-flex flex-column p-3"method="post" action ="sucesso1.php">
                                 <input type="text" name="nomeCompleto" placeholder="Digite seu nome"></input>
                                 <input type="text" name="CPF" placeholder="Digite seu CPF"></input>
-                                <input type="number" name="number" placeholder="Digite o numero do seu cartão"></input>
+                                <input type="number" name="NmCartao" placeholder="Digite o numero do seu cartão"></input>
                                 <input type="date" name="validadeCartao" placeholder="Digite a data de validade"></input>
                                 <input type="passaword" name="codigoCartao" placeholder="Digite o CV"></input>
                                 <button class="btn btn-success" type="submit">Finalizar compra</button>

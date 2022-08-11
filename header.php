@@ -3,7 +3,7 @@
 <header>
         <div class="navbar">
             <h1 id="logo">
-            <?php echo $nomeSitema;?>
+            <a href="indexx.php"><?php echo $nomeSitema;?></a>
             </h1>
             <nav>
                 <ul class="nav">
@@ -13,7 +13,7 @@
                             <a class="nav-link" href="#">Cursos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Olá <?php echo $usuario{'nome'}; ?></a>
+                            <a class="nav-link" href="#">Olá <?php echo $usuario['nome']; ?></a>
                         </li>
                     <?php }else {?>
                         <li class="nav-item">
